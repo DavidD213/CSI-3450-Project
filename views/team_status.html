@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fantasy Football</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="container">
+            <div class="signup-content">
+                <div class="ncaa-football-logo">
+                    <img src="images/college1.jpg" alt="">
+                </div>
+                <div class="signup-form">
+                    <form method="POST" class="register-form" id="register-form">
+                        <h2>Fantasy Football-Team Status Entry</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="team_name">Team ID :</label>
+                                <input type="text" name="team_name" id="team_name" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="state"> Record :</label>
+                                <input type="text" name="state" id="state" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="conference"> Total Touchdowns :</label>
+                            <input type="text" name="conference" id="conference" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="coach"> Total Yards :</label>
+                            <input type="text" name="coach" id="coach" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="coach"> Yards Allowed :</label>
+                            <input type="text" name="coach" id="coach" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="coach"> Touchdowns :</label>
+                            <input type="text" name="coach" id="coach" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="coach"> Turn Overs :</label>
+                            <input type="text" name="coach" id="coach" required/>
+                        </div>
+                    
+
+                        <div class="form-submit">
+                            <input type="submit" value="Reset" class="submit" name="reset" id="reset" />
+                            <input type="submit" value="Submit Entry" class="submit" name="submit" id="submit" />
+                            <!-- SWITCH BETWEEN WINDOWS -->
+                            <br> </br>
+                            <input type="button" class="team_entry" name="submit1" id="team_entry" value="Team Entry" onClick="team_entryFunction()"/> 
+                            <script>
+                             function team_entryFunction() {
+                             window.location.href="team.html";  
+                             }
+                            </script>
+                            <input type="button" class="player_entry" name="submit2" id="player_entry" value="Player Entry" onClick="player_Function()"/> 
+                            <script>
+                             function player_Function() {
+                             window.location.href="Player.html";  
+                             }
+                            </script>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
