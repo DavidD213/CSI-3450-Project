@@ -11,6 +11,9 @@
 
     <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -21,69 +24,58 @@
                     <img src="images/college1.jpg" alt="">
                 </div>
                 <div class="signup-form">
-                    <form method="POST" class="register-form" id="register-form">
+                    <form method="POST" class="register-form" id="register-form" action="/Player">
                         <h2>Fantasy Football-Player Entry</h2>
+                        <br>
+                        <a href="CRUD_Player" class="btn btn-info" role="button">Player Edit</a>
+                        <a href="CRUD_Team" class="btn btn-info" role="button">Team Edit</a>
+                        <a href="CRUD_Team_Status" class="btn btn-info" role="button">Team Status Edit</a>
+
+                       </br>
+                       <br>
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="name">Player Name :</label>
-                                <input type="text" name="name" id="name" required/>
+                                <label for="ID">Player ID :</label>
+                                <input type="text" name="PLAYER_ID" id="PLAYER_ID" required/>
                             </div>
                             <div class="form-group">
-                                <label for="player_age">Player age:</label>
-                                <input type="text" name="player_age" id="player_age" required/>
+                                <label for="fname">First Name:</label>
+                                <input type="text" name="PLAYER_FNAME" id="PLAYER_FNAME" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="lname">Last Name:</label>
+                                <input type="text" name="PLAYER_LNAME" id="PLAYER_LNAME" required/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="team_name">Team :</label>
-                            <input type="text" name="team_name" id="team_name" required/>
+                            <label for="position">Postion :</label>
+                            <input type="text" name="PLAYER_POSITION" id="PLAYER_POSITION" required/>
                         </div>
                         <div class="form-group">
-                            <label for="touchdowns"> Touchdowns :</label>
-                            <input type="text" name="touchdowns" id="touchdowns" required/>
+                            <label for="year"> Year :</label>
+                            <input type="text" name="PLAYER_YEAR" id="PLAYER_YEAR" required/>
                         </div>
                         <div class="form-group">
-                            <label for="total_yrd">Total Yards :</label>
-                            <input type="text" name="total_yrd" id="total_yrd" required/>
+                            <label for="year">Team ID :</label>
+                            <input type="text" name="TEAM_ID" id="TEAM_ID" required/>
                         </div>
-                        <div class="form-group">
-                            <label for="reception">Reception :</label>
-                            <input type="text" name="reception" id="reception">
-                        </div>
-                        <div class="form-group">
-                            <label for="interception">Interceptions :</label>
-                            <input type="text" name="interception" id="interception">
-                        </div>
-                        <div class="form-group">
-                            <label for="fumble_recov">Fumble Recovery :</label>
-                            <input type="text" name="fumble_recov" id="fumble_recov" required/>
-                        </div>
-                        <div class="form-group">
-                            <label for="intercept_throw">Interceptions Thrown :</label>
-                            <input type="text" name="intercept_throw" id="address" required/>
-                        </div>
-                        <div class="form-group">
-                            <label for="tackles">Tackles :</label>
-                            <input type="text" name="tackles" id="tackles" required/>
-                        </div>
-                        <div class="form-group">
-                            <label for="pass_yrd">Passing Yards :</label>
-                            <input type="text" name="pass_yrd" id="pass_yrd" required/>
-                        </div>
+                        
+            
                         <div class="form-submit">
-                            <input type="submit" value="Reset" class="submit" name="reset" id="reset" />
-                            <input type="submit" value="Submit Entry" class="submit" name="submit" id="submit" />
+                            <input type="reset" value="Reset" class="submit" name="reset" id="reset" onclick="ClearFields()"/>
+                            <input type="submit" value="Submit Entry" class="submit" name="submit" id="submit" onclick="ClearField()" />
                             <!-- SWITCH BETWEEN WINDOWS -->
                             <br> </br>
                             <input type="button" class="team_status" name="submit1" id="team_status" value="Team Status Entry" onClick="teamstatusFunction()"/> 
                              <script>
                              function teamstatusFunction() {
-                             window.location.href="team_status.html";  
+                             window.location.href="team_status";  
                              }
                              </script>
                             <input type="button" class="team_entry" name="submit2" id="team_entry" value="Team Entry" onClick="team_entryFunction()"/> 
                              <script>
                               function team_entryFunction() {
-                              window.location.href="team.html";  
+                              window.location.href="team";  
                               }
                              </script>
                         </div>

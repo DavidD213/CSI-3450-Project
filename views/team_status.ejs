@@ -11,6 +11,9 @@
 
     <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -23,6 +26,12 @@
                 <div class="signup-form">
                     <form method="POST" class="register-form" id="register-form">
                         <h2>Fantasy Football-Team Status Entry</h2>
+                        <br>
+                        <a href="CRUD_Player" class="btn btn-info" role="button">Player Edit</a>
+                        <a href="CRUD_Team" class="btn btn-info" role="button">Team Edit</a>
+                        <a href="CRUD_Team_Status" class="btn btn-info" role="button">Team Status Edit</a>
+                       </br>
+                       <br>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="team_name">Team ID :</label>
@@ -30,46 +39,46 @@
                             </div>
                             <div class="form-group">
                                 <label for="state"> Record :</label>
-                                <input type="text" name="state" id="state" required/>
+                                <input type="text" name="state" id="record" required/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="conference"> Total Touchdowns :</label>
-                            <input type="text" name="conference" id="conference" required/>
+                            <input type="text" name="conference" id="total_touchdowns" required/>
                         </div>
                         <div class="form-group">
                             <label for="coach"> Total Yards :</label>
-                            <input type="text" name="coach" id="coach" required/>
+                            <input type="text" name="coach" id="total_yards" required/>
                         </div>
                         <div class="form-group">
                             <label for="coach"> Yards Allowed :</label>
-                            <input type="text" name="coach" id="coach" required/>
+                            <input type="text" name="coach" id="yards_allow" required/>
                         </div>
                         <div class="form-group">
                             <label for="coach"> Touchdowns :</label>
-                            <input type="text" name="coach" id="coach" required/>
+                            <input type="text" name="coach" id="touch_downs" required/>
                         </div>
                         <div class="form-group">
                             <label for="coach"> Turn Overs :</label>
-                            <input type="text" name="coach" id="coach" required/>
+                            <input type="text" name="coach" id="turn_overs" required/>
                         </div>
                     
 
                         <div class="form-submit">
-                            <input type="submit" value="Reset" class="submit" name="reset" id="reset" />
+                            <input type="reset" value="Reset" class="submit" name="reset" id="reset" onclick="ClearFields()"/>
                             <input type="submit" value="Submit Entry" class="submit" name="submit" id="submit" />
                             <!-- SWITCH BETWEEN WINDOWS -->
                             <br> </br>
                             <input type="button" class="team_entry" name="submit1" id="team_entry" value="Team Entry" onClick="team_entryFunction()"/> 
                             <script>
                              function team_entryFunction() {
-                             window.location.href="team.html";  
+                             window.location.href="team";  
                              }
                             </script>
                             <input type="button" class="player_entry" name="submit2" id="player_entry" value="Player Entry" onClick="player_Function()"/> 
                             <script>
                              function player_Function() {
-                             window.location.href="Player.html";  
+                             window.location.href="Player";  
                              }
                             </script>
                             
