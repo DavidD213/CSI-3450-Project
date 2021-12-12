@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Sidebar 01</title>
+  	<title>List Of Players Table</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -9,6 +9,8 @@
 		
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/style1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
 		
@@ -20,52 +22,20 @@
              <a href="#" class="img logo rounded-circle mb-11" style="background-image: url(images/fantasy_footbal.jpg);"></a>
           <br> </br>
 	        <ul class="list-unstyled components mb-5">
-	          <li class="active">
-	            <a href="Index">Home</a>
-	            <!-- <ul class="collapse list-unstyled" id="homeSubmenu">
-                <li>
-                    <a href="#">Home 1</a>
-                </li>
-                <li>
-                    <a href="#">Home 2</a>
-                </li>
-                <li>
-                    <a href="#">Home 3</a>
-                </li>
-	            </ul> -->
-	          </li>
-	          <li>
+	           <li>
 	              <a href="team_Table">Team</a>
-	          </li>
-              <li>
+	           </li>
+             <li>
                   <a href="team_status_Table">Team Status</a>
-              </li>
-              <li>
+             </li>
+             <li>
                   <a href="playerTable">Player</a>
-              </li>
-                   
-	          </li>
+             </li>    
+             <li>
+                 <a href="log_In" class="btn btn-info" role="button">Sign In</a>
+             </li>
                 
-              <!-- <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-              <ul class="collapse list-unstyled" id="pageSubmenu">
-                <li>
-                    <a href="#">Page 1</a>
-                </li>
-                <li>
-                    <a href="#">Page 2</a>
-                </li>
-                <li>
-                    <a href="#">Page 3</a>
-                </li>
-              </ul>
-	          </li>
-	          <li>
-              <a href="#">Portfolio</a>
-	          </li>
-	          <li>
-              <a href="#">Contact</a>
-	          </li>
-	        </ul> -->
+          </ul>
 
 	        <div class="footer">
             <p>Powered by: Yariq Thomans and David </p>
@@ -93,11 +63,8 @@
             </br>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="Index">Home</a>
-                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Player</a>
+                    <a class="nav-link" href="playerTable">Player</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="team_status_Table">Team status</a>
@@ -115,84 +82,24 @@
                 <table class="fl-table">
                     <thead>
                     <tr>
-                        <th>Header 1</th>
-                        <th>Header 2</th>
-                        <th>Header 3</th>
-                        <th>Header 4</th>
-                        <th>Header 5</th>
+                        <th>Player ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Position</th>
+                        <th>Team ID</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Content 4</td>
-                        <td>Content 4</td>
-                        <td>Content 4</td>
-                        <td>Content 4</td>
-                        <td>Content 4</td>
-                    </tr>
-                    <tr>
-                        <td>Content 5</td>
-                        <td>Content 5</td>
-                        <td>Content 5</td>
-                        <td>Content 5</td>
-                        <td>Content 5</td>
-                    </tr>
-                    <tr>
-                        <td>Content 6</td>
-                        <td>Content 6</td>
-                        <td>Content 6</td>
-                        <td>Content 6</td>
-                        <td>Content 6</td>
-                    </tr>
-                    <tr>
-                        <td>Content 7</td>
-                        <td>Content 7</td>
-                        <td>Content 7</td>
-                        <td>Content 7</td>
-                        <td>Content 7</td>
-                    </tr>
-                    <tr>
-                        <td>Content 8</td>
-                        <td>Content 8</td>
-                        <td>Content 8</td>
-                        <td>Content 8</td>
-                        <td>Content 8</td>
-                    </tr>
-                    <tr>
-                        <td>Content 9</td>
-                        <td>Content 9</td>
-                        <td>Content 9</td>
-                        <td>Content 9</td>
-                        <td>Content 9</td>
-                    </tr>
-                    <tr>
-                        <td>Content 10</td>
-                        <td>Content 10</td>
-                        <td>Content 10</td>
-                        <td>Content 10</td>
-                        <td>Content 10</td>
-                    </tr>
+                        <% player.forEach(function(player){ %>
+                            <tr>
+                                <td><%= player.PLAYER_ID %></td>
+                                <td><%= player.PLAYER_FNAME %></td>
+                                <td><%= player.PLAYER_LNAME %></td>
+                                <td><%= player.PLAYER_POSITION%></td>
+                                <td><%= player.TEAM_ID%></td>
+
+                            </tr>
+                        <% }); %>
                     <tbody>
                 </table>
             </div>

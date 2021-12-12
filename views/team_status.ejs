@@ -24,7 +24,7 @@
                     <img src="images/college1.jpg" alt="">
                 </div>
                 <div class="signup-form">
-                    <form method="POST" class="register-form" id="register-form">
+                    <form method="POST" class="register-form" id="register-form" action="/team_status_input">
                         <h2>Fantasy Football-Team Status Entry</h2>
                         <br>
                         <a href="CRUD_Player" class="btn btn-info" role="button">Player Edit</a>
@@ -34,39 +34,43 @@
                        <br>
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="team_name">Team ID :</label>
-                                <input type="text" name="team_name" id="team_name" required/>
+                                <label for="team_name">Team Status ID :</label>
+                                <input type="text" name="TEAMSTATS_ID" id="TEAMSTATS_ID" required/>
                             </div>
                             <div class="form-group">
                                 <label for="state"> Record :</label>
-                                <input type="text" name="state" id="record" required/>
+                                <input type="text" name="TEAMSTATS_RECORD" id="TEAMSTATS_RECORD" required/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="conference"> Total Touchdowns :</label>
-                            <input type="text" name="conference" id="total_touchdowns" required/>
+                            <label for="conference"> PTS :</label>
+                            <input type="text" name="TEAMSTATS_PTS" id="TEAMSTATS_PTS" required/>
                         </div>
                         <div class="form-group">
                             <label for="coach"> Total Yards :</label>
-                            <input type="text" name="coach" id="total_yards" required/>
+                            <input type="text" name="TEAMSTATS_TOTALYARDS" id="TEAMSTATS_TOTALYARDS" required/>
                         </div>
                         <div class="form-group">
                             <label for="coach"> Yards Allowed :</label>
-                            <input type="text" name="coach" id="yards_allow" required/>
+                            <input type="text" name="TEAMSTATS_YARDSALLOWED" id="TEAMSTATS_YARDSALLOWED" required/>
                         </div>
                         <div class="form-group">
-                            <label for="coach"> Touchdowns :</label>
-                            <input type="text" name="coach" id="touch_downs" required/>
+                            <label for="coach"> PTS Allowed :</label>
+                            <input type="text" name="TEAMSTATS_PTSALLOWED" id="TEAMSTATS_PTSALLOWED" required/>
                         </div>
                         <div class="form-group">
-                            <label for="coach"> Turn Overs :</label>
-                            <input type="text" name="coach" id="turn_overs" required/>
+                            <label for="coach"> Turn Overs  :</label>
+                            <input type="text" name="TEAMSTATS_TURNOVERS" id="TEAMSTATS_TURNOVERS" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="coach"> Team ID  :</label>
+                            <input type="text" name="TEAM_ID" id="TEAM_ID" required/>
                         </div>
                     
 
                         <div class="form-submit">
                             <input type="reset" value="Reset" class="submit" name="reset" id="reset" onclick="ClearFields()"/>
-                            <input type="submit" value="Submit Entry" class="submit" name="submit" id="submit" />
+                            <input type="submit" value="Submit Entry" class="submit" name="submit" id="submit" onclick="ClearField()" />
                             <!-- SWITCH BETWEEN WINDOWS -->
                             <br> </br>
                             <input type="button" class="team_entry" name="submit1" id="team_entry" value="Team Entry" onClick="team_entryFunction()"/> 

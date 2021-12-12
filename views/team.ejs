@@ -24,7 +24,7 @@
                     <img src="images/college1.jpg" alt="">
                 </div>
                 <div class="signup-form">
-                    <form method="POST" class="register-form" id="register-form" action="/team">
+                    <form method="POST" class="register-form" id="register-form" action="/team_input">
                         <h2>Fantasy Football-Team Entry</h2>
                         <br>
                         <a href="CRUD_Player" class="btn btn-info" role="button">Player Edit</a>
@@ -50,13 +50,7 @@
                         <div class="form-group">
                             <label for="conference"> Team Conference :</label>
                             <input type="text" name="TEAM_CONFERENCE" id="TEAM_CONFERENCE" required/>
-                        </div>
-                        <div class="form-group">
-                            <label for="coach"> Team Status ID :</label>
-                            <input type="text" name="TEAMSTATS_ID" id="TEAMSTATS_ID" required/>
-                        </div>
-                    
-
+                        </div>       
                         <div class="form-submit">
                             <input type="reset" value="Reset" class="submit" name="reset" id="reset" onclick="ClearFields()"/>
                             <input type="submit" value="Submit Entry" class="submit" name="submit" id="submit" onclick="ClearField()"/>
