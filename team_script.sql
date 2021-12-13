@@ -1,0 +1,15 @@
+INSERT INTO TEAM(TEAM_ID, TEAM_STATE, TEAM_NAME, TEAM_CONFERENCE)
+VALUE(10, "Michigan", "Michigan 1", "Big Ten"),
+     (20, "Michigan", "Michigan State", "Big Ten"),
+     (30, "Ohio", "Ohio State", "Big Ten"),
+     (40, "Nebraska", "Nebraska", "Big Ten"),
+     (50, "Wisconsin", "Wisconsin", "Big Ten"),
+     (60, "Illinois", "Illinois", "Big Ten"),
+     (70, "Pennsalyania", "Penn State", "Big Ten"),
+     (80, "Maryland", "Maryland", "Big Ten"),
+     (90, "New York", "Rutgers", "Big Ten"),
+     (100, "Minnesota", "Minnesota", "Big Ten"),
+     (110, "Iowa", "Iowa", "Big Ten"),
+     (120, "Indiana", "Indiana", "Big Ten"),
+     (130, "Indiana", "Purdue", "Big Ten"),
+     (140, "Illinois", "Northwestern", "Big Ten");
